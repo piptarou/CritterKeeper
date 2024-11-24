@@ -3,15 +3,13 @@ const mongoose = require('mongoose');
 const app = express();
 const port = 3000;
 
-// Connect to MongoDB
-mongoose.connect('mongodb://172.16.0.118:27017/sports_v1', {}).then(() => {
+mongoose.connect('mongodb://172.16.0.118:27017/rescues', {}).then(() => {
     console.log('Connected to the MongoDB database.');
   }).catch(err => {
     console.error('Error connecting to the database:', err);
   })
 ;
 
-// Define Mongoose schemas and models
 const critterSchema = new mongoose.Schema({
     rescue_date: Date,
     case_number: Number,
@@ -25,11 +23,8 @@ const critterSchema = new mongoose.Schema({
     km_driven: Number
 });
 
-
-// Create the model
 const Critter = mongoose.model('Critter', critterSchema, 'critters');
 
-// Define a route to retrieve and display the data
 app.get('/', async (req, res) => {
   console.log('Received request to /');
   try {
