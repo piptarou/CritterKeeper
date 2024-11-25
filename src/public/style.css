@@ -1,0 +1,18 @@
+.table-scrollable {
+    max-height: 400px;
+    overflow-y: auto;
+    display: block;
+}
+
+.table th, .table td {
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+.table th {
+    position: sticky;
+    top: 0;
+    background-color: #cadbec;
+    z-index: 1;
+}
