@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Critter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="mt-5">Add a New Critter</h2>
+        <form action="/add-critter" method="POST" class="mt-3">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="rescue_date">Rescue Date</label>
+                    <input type="date" class="form-control" name="rescue_date" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="case_number">Case Number</label>
+                    <input type="text" class="form-control" name="case_number" required pattern="^[0-9]+$"
+                        title="Please enter only numbers">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="rescue_role">Rescue Role</label>
+                    <select class="form-control" name="rescue_role" required>
+                        <option value="Pick up">Pick up</option>
+                        <option value="Relay">Relay</option>
+                        <option value="Capture">Capture</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="critter_count">Critter Count</label>
+                    <input type="number" class="form-control" name="critter_count" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="animal_type">Animal Type</label>
+                    <input type="text" class="form-control" name="animal_type" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="animal_age">Animal Age</label>
+                    <select class="form-control" name="animal_age" required>
+                        <option value="Baby">Baby</option>
+                        <option value="Juvenile">Juvenile</option>
+                        <option value="Adult">Adult</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="conservation_status">Conservation Status</label>
+                    <select class="form-control" name="conservation_status" required>
+                        <option value="Least Concern">Least Concern</option>
+                        <option value="Special Concern">Special Concern</option>
+                        <option value="Vulnerable">Vulnerable</option>
+                        <option value="Endangered">Endangered</option>
+                        <option value="Critically Endangered">Critically Endangered</option>
+                        <option value="Unknown">Unknown</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="original_location">Original Location</label>
+                    <input type="text" class="form-control" name="original_location" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="km_driven">KM Driven</label>
+                    <input type="text" class="form-control" name= "km_driven" required pattern="^[0-9]+$"
+                        title="Please enter only numbers">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="volunteer_notes">Volunteer Notes</label>
+                    <textarea class="form-control" name="volunteer_notes" style="resize: both;" rows="4"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Critter</button>
+        </form>
+    </div>
+</body>
+</html>
