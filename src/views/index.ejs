@@ -14,7 +14,7 @@
         <h1>Critter Keeper</h1>
 
         <h2 class="mt-4">All Critters</h2>
-        <div class="table-scrollable">
+        <div class="table-container">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -28,7 +28,8 @@
                         <th>Original Location</th>
                         <th>KM Driven</th>
                         <th>Volunteer Notes</th>
-                        <th>Edit</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,8 +45,14 @@
                             <td><%= critter.original_location %></td>
                             <td><%= critter.km_driven %></td>
                             <td><%= critter.volunteer_notes %></td>
-                            <td><a href="/edit/<%= critter.case_number %>" class="btn btn-warning btn-sm">Edit</a></td>
-
+                            <td><a href="/edit/<%= critter.case_number %>" class="btn btn-warning">Edit</a></td>
+                            <td>
+                                <form action="/delete" method="POST" style="display:inline;">
+                                    <input type="hidden" name="critterId" value="<%= critter._id %>">
+                                    <button class="btn btn-danger" onclick="deleteCritter('<%= critter._id %>')">Delete</button>
+                                </form>
+                            </div>
+                            </td>
                         </tr>
                     <% }); %>
                 </tbody>
