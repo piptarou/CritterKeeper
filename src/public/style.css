@@ -1,13 +1,27 @@
-.table-scrollable {
+.container {
+    width: 70%;
+    max-width: 100%;
+}
+
+.table-container {
     max-height: 400px;
     overflow-y: auto;
     display: block;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 .table th, .table td {
     word-wrap: break-word;
     white-space: normal;
     text-align: center;
+    padding: 8px 12px;
 }
 
 .table th {
