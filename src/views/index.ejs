@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critter Keeper</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Critter Keeper</h1>
+
+        <h2 class="mt-4">All Critters</h2>
+        <div class="table-scrollable">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Rescue Date</th>
+                        <th>Case Number</th>
+                        <th>Rescue Role</th>
+                        <th>Critter Count</th>
+                        <th>Animal Type</th>
+                        <th>Life Stage</th>
+                        <th>Conservation Status</th>
+                        <th>Original Location</th>
+                        <th>KM Driven</th>
+                        <th>Volunteer Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% critters.forEach(critter => { %>
+                        <tr>
+                            <td><%= new Date(critter.rescue_date).toLocaleDateString() %></td>
+                            <td><%= critter.case_number %></td>
+                            <td><%= critter.rescue_role %></td>
+                            <td><%= critter.critter_count %></td>
+                            <td><%= critter.animal_type %></td>
+                            <td><%= critter.animal_age %></td>
+                            <td><%= critter.conservation_status %></td>
+                            <td><%= critter.original_location %></td>
+                            <td><%= critter.km_driven %></td>
+                            <td><%= critter.volunteer_notes %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <a href="/add-critter" class="btn btn-primary mt-4">Add New Critter</a>
+    </div>
+</body>
+</html>
