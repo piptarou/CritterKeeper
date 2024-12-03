@@ -112,7 +112,7 @@ app.post('/delete', async (req, res) => {
 });
 
 // add new critter
-app.post('/add-critter', async (req, res) => {
+app.post('/new_critter', async (req, res) => {
   const newCritter = new Critter({
     rescue_date: req.body.rescue_date,
     case_number: req.body.case_number,

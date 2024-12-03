@@ -30,3 +30,7 @@
     background-color: #cadbec;
     z-index: 1;
 }
+
+.delete-btn {
+  display: inline;
+}

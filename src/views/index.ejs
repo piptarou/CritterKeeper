@@ -48,16 +48,15 @@
                             <td>
                                 <form action="/delete" method="POST" style="display:inline;">
                                     <input type="hidden" name="critterId" value="<%= critter._id %>">
-                                    <button class="btn btn-danger" onclick="deleteCritter('<%= critter._id %>')">Delete</button>
+                                    <button class="btn btn-danger">Delete</button>
                                 </form>
-                            </div>
                             </td>
                         </tr>
                     <% }); %>
                 </tbody>
             </table>
         </div>
-        <a href="/add-critter" class="btn btn-primary mt-4">Add New Critter</a>
+        <a href="/new_critter" class="btn btn-primary mt-4">Add New Critter</a>
     </div>
 </body>
 </html>
