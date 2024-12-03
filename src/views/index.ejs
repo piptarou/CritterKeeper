@@ -46,8 +46,7 @@
               <td><%= critter.volunteer_notes %></td>
               <td><a href="/edit/<%= critter.case_number %>" class="btn btn-warning">Edit</a></td>
               <td>
-                <form action="/delete" method="POST" style="display:inline;">
-                  <input type="hidden" name="critterId" value="<%= critter._id %>">
+                <form action="/delete/<%= critter.case_number %>" method="POST" style="display:inline;">
                   <button class="btn btn-danger">Delete</button>
                 </form>
               </td>

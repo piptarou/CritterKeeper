@@ -1,0 +1,99 @@
+openapi: 3.0.0
+info:
+  title: critterkeeper_api_spec
+  version: 1.0.0
+paths:
+  /:
+    get:
+      summary: Get All Critters
+      operationId: getAllCritters
+      description: 'View all critters on the main page'
+      tags:
+        - ''
+      responses:
+        '200':
+          description: 'OK'
+        '500':
+          description: 'Internal Server Error'
+  /edit/{case_number}:
+    get:
+      summary: Get Edit Critter Page
+      operationId: editCritterPage
+      description: 'Retrieve the "edit critter" page'
+      tags:
+        - ''
+      responses:
+        '200':
+          description: 'OK'
+        '404':
+          description: 'Critter not found'
+        '500':
+          description: 'Internal Server Error'
+      parameters:
+        - name: case_number
+          in: path
+          description: 'Rescue case number'
+          required: true
+          example: '9'
+  /update/{case_number}:
+    post:
+      summary: Update Critter by Case Number
+      operationId: updateCritter
+      description: 'Update the critter by case number'
+      tags:
+        - ''
+      responses:
+        '200':
+          description: 'OK'
+        '404':
+          description: 'Critter not found'
+        '500':
+          description: 'Internal Server Error'
+      parameters:
+        - name: case_number
+          in: path
+          description: 'Rescue case number'
+          required: true
+          example: '9'
+          schema:
+            type: string
+  /delete/{case_number}:
+    post:
+      summary: Delete Critter by Case Number
+      operationId: deleteCritter
+      description: 'Delete a critter by case number'
+      tags:
+        - ''
+      responses:
+        '200':
+          description: 'OK'
+        '404':
+          description: 'Critter not found'
+        '500':
+          description: 'Error deleting critter'
+      parameters:
+        - name: case_number
+          in: path
+          description: 'Critter case number'
+          required: true
+          example: '9'
+          schema:
+            type: string
+  /new_critter:
+    post:
+      summary: Add New Critter
+      operationId: addNewCritter
+      description: 'Add a new rescue case to the database'
+      tags:
+        - ''
+      responses:
+        '200':
+          description: 'OK'
+        '500':
+          description: 'Internal Server Error'
+servers:
+  - url: http://localhost:3000
+components:
+  schemas: {}
+  requestBodies: {}
+  securitySchemes: {}

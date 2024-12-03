@@ -43,14 +43,11 @@ app.get('/', async (req, res) => {
 // edit route
 app.get('/edit/:case_number', async (req, res) => {
   const caseNumber = req.params.case_number;
-
   try {
     const critter = await Critter.findOne({ case_number: caseNumber });
-
     if (!critter) {
       return res.status(404).send('Critter not found');
     }
-
     res.render('edit', { critter });
   } catch (err) {
     console.error('Error fetching critter:', err);
@@ -61,7 +58,6 @@ app.get('/edit/:case_number', async (req, res) => {
 // update route
 app.post('/update/:case_number', async (req, res) => {
   const caseNumber = req.params.case_number;
-
   try {
     const updatedCritter = await Critter.findOneAndUpdate(
       { case_number: caseNumber },
@@ -78,11 +74,9 @@ app.post('/update/:case_number', async (req, res) => {
       },
       { new: true }
     );
-
     if (!updatedCritter) {
       return res.status(404).send('Critter not found');
     }
-
     res.redirect('/');
   } catch (err) {
     console.error('Error updating critter:', err);
@@ -95,10 +89,10 @@ app.get('/new_critter', (req, res) => {
 });
 
 // delete critter
-app.post('/delete', async (req, res) => {
-  const critterId = req.body.critterId;
+app.post('/delete/:case_number', async (req, res) => {
+  const caseNumber = req.params.case_number;
   try {
-    const critter = await Critter.findByIdAndDelete(critterId);
+    const critter = await Critter.findOneAndDelete({ case_number: caseNumber });
     if (!critter) {
       return res.status(404).send('Critter not found');
     }
@@ -123,7 +117,6 @@ app.post('/new_critter', async (req, res) => {
     km_driven: req.body.km_driven,
     volunteer_notes: req.body.volunteer_notes,
   });
-
   try {
     await newCritter.save();
     res.redirect('/');
