@@ -1,8 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const bcrypt = require('bcrypt');
+
 const app = express();
 const port = 3000;
+
+const Critter = require('./models/Critter'); // Ensure this model exists
+const User = require('./models/User');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -14,22 +20,7 @@ mongoose.connect('mongodb://localhost:27017/critterkeeper', {}).then(() => {
   console.error('Error connecting to the database:', err);
 });
 
-const critterSchema = new mongoose.Schema({
-  case_number: { type: String, required: true, unique: true },
-  rescue_date: { type: Date, required: true },
-  rescue_role: { type: String, required: true },
-  critter_count: { type: Number, required: true },
-  animal_type: { type: String, required: true },
-  animal_age: { type: String, required: true },
-  conservation_status: { type: String, required: true },
-  original_location: { type: String, required: true },
-  km_driven: { type: Number, required: true },
-  volunteer_notes: { type: String, required: false }
-});
-
-const Critter = mongoose.model('Critter', critterSchema, 'critters');
-
-// index route
+// index of critters
 app.get('/', async (req, res) => {
   try {
     const critters = await Critter.find();
@@ -40,7 +31,7 @@ app.get('/', async (req, res) => {
   }
 });
 
-// edit route
+// edit critter
 app.get('/edit/:case_number', async (req, res) => {
   const caseNumber = req.params.case_number;
   try {
@@ -55,7 +46,7 @@ app.get('/edit/:case_number', async (req, res) => {
   }
 });
 
-// update route
+// update critter
 app.post('/update/:case_number', async (req, res) => {
   const caseNumber = req.params.case_number;
   try {
@@ -126,6 +117,7 @@ app.post('/new_critter', async (req, res) => {
   }
 });
 
+// start server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

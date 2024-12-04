@@ -9,7 +9,7 @@ paths:
       operationId: getAllCritters
       description: 'View all critters on the main page'
       tags:
-        - ''
+        - 'Critters'
       responses:
         '200':
           description: 'OK'
@@ -21,7 +21,7 @@ paths:
       operationId: editCritterPage
       description: 'Retrieve the "edit critter" page'
       tags:
-        - ''
+        - 'Critters'
       responses:
         '200':
           description: 'OK'
@@ -41,7 +41,7 @@ paths:
       operationId: updateCritter
       description: 'Update the critter by case number'
       tags:
-        - ''
+        - 'Critters'
       responses:
         '200':
           description: 'OK'
@@ -63,7 +63,7 @@ paths:
       operationId: deleteCritter
       description: 'Delete a critter by case number'
       tags:
-        - ''
+        - 'Critters'
       responses:
         '200':
           description: 'OK'
@@ -85,7 +85,7 @@ paths:
       operationId: addNewCritter
       description: 'Add a new rescue case to the database'
       tags:
-        - ''
+        - 'Critters'
       responses:
         '200':
           description: 'OK'
