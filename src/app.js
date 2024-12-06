@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const uri = 'mongodb://mongo:27017/critters';
+const uri = 'mongodb://mongo:27017/critterkeeper';
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const argon2 = require('argon2');
@@ -25,8 +25,10 @@ mongoose
 // index of critters
 app.get('/', async (req, res) => {
   try {
-    const critters = await Critter.find();
-    res.render('index', { critters });
+    const sort = req.query.sort || 'desc';
+    const sortOrder = sort === 'asc' ? 1 : -1;
+    const critters = await Critter.find().sort({ rescue_date: sortOrder });
+    res.render('index', { critters, sort });
   } catch (err) {
     console.error('Error fetching critters:', err);
     res.status(500).send('Internal Server Error');
