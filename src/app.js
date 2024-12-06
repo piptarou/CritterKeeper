@@ -1,24 +1,26 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const uri = 'mongodb://mongo:27017/critters';
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const bcrypt = require('bcrypt');
+const argon2 = require('argon2');
 
 const app = express();
 const port = 3000;
+const path = require('path');
 
-const Critter = require('./models/Critter'); // Ensure this model exists
+const Critter = require('./models/Critter');
 const User = require('./models/User');
 
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use(express.static('./src/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://localhost:27017/critterkeeper', {}).then(() => {
-  console.log('Connected to the MongoDB database.');
-}).catch(err => {
-  console.error('Error connecting to the database:', err);
-});
+mongoose
+  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((err) => console.error('Error connecting to the database:', err));
 
 // index of critters
 app.get('/', async (req, res) => {
@@ -114,6 +116,25 @@ app.post('/new_critter', async (req, res) => {
   } catch (err) {
     console.error('Error adding critter:', err);
     res.status(500).send('Internal Server Error');
+  }
+});
+
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    const user = await User.findOne({ username });
+    if (!user) {
+      return res.status(400).send('Invalid username or password');
+    }
+    const isPasswordValid = await argon2.verify(user.password, password);
+    if (!isPasswordValid) {
+      return res.status(400).send('Invalid username or password');
+    }
+    req.session.user = { id: user._id, username: user.username };
+    res.send('Login successful');
+  } catch (err) {
+    console.error('Error during login:', err);
+    res.status(500).send('Error logging in');
   }
 });
 

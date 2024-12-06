@@ -1,13 +1,16 @@
 {
   "dependencies": {
+    "argon2": "^0.41.1",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
+    "express-session": "^1.18.1",
     "method-override": "^3.0.0",
     "mongoose": "^8.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
     "eslint": "^9.16.0",
-    "globals": "^15.13.0"
+    "globals": "^15.13.0",
+    "nodemon": "^3.1.7"
   }
 }

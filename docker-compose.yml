@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   app:
     build:
@@ -11,6 +9,7 @@ services:
       - ./src:/app/src
     environment:
       - NODE_ENV=development
+    command: ["npx", "nodemon", "src/app.js"]
     depends_on:
       - mongo
 
@@ -23,7 +22,9 @@ services:
       - mongo_data:/data/db
 
   php:
-    image: php:8.2-apache
+    build:
+      context: .
+      dockerfile: Dockerfile-php
     container_name: php_container
     ports:
       - "8080:80"
