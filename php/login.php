@@ -2,7 +2,7 @@
 session_start();
 
 require 'vendor/autoload.php';
-$client = new MongoDB\Client("mongodb://localhost:27017");
+$client = new MongoDB\Client("mongodb://127.0.0.1:27017");
 $db = $client->critterkeeper;
 $users = $db->User;
 
