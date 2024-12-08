@@ -27,7 +27,7 @@ mongoose
   .then(() => {
     console.log('Connected to MongoDB');
 
-    // Create test user
+    // create test user
     (async () => {
       try {
         const hashedPassword = await argon2.hash('testpassword123');
@@ -59,7 +59,7 @@ app.get('/', async (req, res) => {
     const sortOrder = sort === 'asc' ? 1 : -1;
     const critters = await Critter.find().sort({ rescue_date: sortOrder });
 
-    res.render('index', { critters, sort });
+    res.render('index', { critters, sort, user: req.session.user });
   } catch (err) {
     console.error('Error fetching critters:', err);
     res.status(500).send('Internal Server Error');
@@ -175,6 +175,52 @@ app.post('/login', async (req, res) => {
   } catch (err) {
     console.error('Error during login:', err);
     res.status(500).render('login', { error: 'An error occurred. Please try again.' });
+  }
+});
+
+// logout
+app.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.error('Error during logout:', err);
+      return res.status(500).send('Error logging out');
+    }
+    res.redirect('/logout?message=loggedOut');
+  });
+});
+
+// get registration page
+app.get('/register', (req, res) => {
+  res.render('registration', { error: null });
+});
+
+// user registration
+app.post('/register', async (req, res) => {
+  const { username, email, password, confirmPassword } = req.body;
+
+  try {
+    if (password !== confirmPassword) {
+      return res.render('registration', { error: 'Passwords do not match!' });
+    }
+    const existingUser = await User.findOne({ username });
+    if (existingUser) {
+      return res.render('registration', { error: 'Username already taken!' });
+    }
+    if (email) {
+      const existingEmail = await User.findOne({ email });
+      if (existingEmail) {
+        return res.render('registration', { error: 'Email is already in use!' });
+      }
+    }
+
+    const hashedPassword = await argon2.hash(password);
+    const newUser = new User({ username, email, password: hashedPassword });
+    await newUser.save();
+
+    res.redirect('/login');
+  } catch (err) {
+    console.error('Error during registration:', err);
+    res.status(500).render('registration', { error: 'An error occurred. Please try again.' });
   }
 });
 

@@ -11,61 +11,76 @@
 
 <body>
   <div class="container mt-5">
-    <h1>Critter Keeper</h1>
-    <h2 class="mt-4">All Critters</h2>
+    <div class="row">
+      <nav class="col-md-1">
+        <% if (user) { %>
+          <a href="/">Home</a>
+          </br>
+          <a href="/login">Logout</a>
+          <% } else { %>
+            <a href="/login">Login</a>
+            <% } %>
+      </nav>
 
-    <form action="/" method="GET" class="form-inline mb-3">
-      <label for="sort" class="mr-2">Sort by:</label>
-      <select name="sort" id="sort" class="form-control">
-        <option value="desc" <%=sort==='desc' ? 'selected' : '' %>>Date (Newest First)</option>
-        <option value="asc" <%=sort==='asc' ? 'selected' : '' %>>Date (Oldest First)</option>
-      </select>
-      <button type="submit" class="btn btn-primary ml-2">Sort</button>
-    </form>
+      <div class="col-md-9">
+        <h1>Critter Keeper</h1>
+        </br>
+        <h2 class="mt-4">All Critters</h2>
 
-    <div class="table-container">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Rescue Date</th>
-            <th>Case Number</th>
-            <th>Rescue Role</th>
-            <th>Critter Count</th>
-            <th>Animal Type</th>
-            <th>Life Stage</th>
-            <th>Conservation Status</th>
-            <th>Original Location</th>
-            <th>KM Driven</th>
-            <th>Volunteer Notes</th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% critters.forEach(critter=> { %>
-            <tr>
-              <td><%= new Date(critter.rescue_date).toLocaleDateString() %></td>
-              <td><%= critter.case_number %></td>
-              <td><%= critter.rescue_role %></td>
-              <td><%= critter.critter_count %></td>
-              <td><%= critter.animal_type %></td>
-              <td><%= critter.animal_age %></td>
-              <td><%= critter.conservation_status %></td>
-              <td><%= critter.original_location %></td>
-              <td><%= critter.km_driven %></td>
-              <td><%= critter.volunteer_notes %></td>
-              <td><a href="/edit/<%= critter.case_number %>" class="btn btn-warning">Edit</a></td>
-              <td>
-                <form action="/delete/<%= critter.case_number %>" method="POST" style="display:inline;">
-                  <button class="btn btn-danger">Delete</button>
-                </form>
-              </td>
-            </tr>
-            <% }); %>
-        </tbody>
-      </table>
-    </div>
-    <a href="/new_critter" class="btn btn-primary mt-4">Add New Critter</a>
-  </div>
+        <form action="/" method="GET" class="form-inline mb-3">
+          <label for="sort" class="mr-2">Sort by:</label>
+          <select name="sort" id="sort" class="form-control">
+            <option value="desc" <%=sort==='desc' ? 'selected' : '' %>>Date (Newest First)</option>
+            <option value="asc" <%=sort==='asc' ? 'selected' : '' %>>Date (Oldest First)</option>
+          </select>
+          <button type="submit" class="btn btn-primary ml-2">Sort</button>
+        </form>
+
+        <div class="table-container">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Rescue Date</th>
+                <th>Case Number</th>
+                <th>Rescue Role</th>
+                <th>Critter Count</th>
+                <th>Animal Type</th>
+                <th>Life Stage</th>
+                <th>Conservation Status</th>
+                <th>Original Location</th>
+                <th>KM Driven</th>
+                <th>Volunteer Notes</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% critters.forEach(critter=> { %>
+                <tr>
+                  <td><%= new Date(critter.rescue_date).toLocaleDateString() %></td>
+                  <td><%= critter.case_number %></td>
+                  <td><%= critter.rescue_role %></td>
+                  <td><%= critter.critter_count %></td>
+                  <td><%= critter.animal_type %></td>
+                  <td><%= critter.animal_age %></td>
+                  <td><%= critter.conservation_status %></td>
+                  <td><%= critter.original_location %></td>
+                  <td><%= critter.km_driven %></td>
+                  <td><%= critter.volunteer_notes %></td>
+                  <td><a href="/edit/<%= critter.case_number %>" class="btn btn-warning">Edit</a></td>
+                  <td>
+                    <form action="/delete/<%= critter.case_number %>" method="POST" style="display:inline;">
+                      <button class="btn btn-danger">Delete</button>
+                    </form>
+                  </td>
+                </tr>
+                <% }); %>
+            </tbody>
+          </table>
+        </div>
+
+        <a href="/new_critter" class="btn btn-primary mt-4">Add New Critter</a>
+      </div>
 </body>
 </html>
