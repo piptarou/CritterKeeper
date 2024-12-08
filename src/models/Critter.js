@@ -10,7 +10,8 @@ const critterSchema = new mongoose.Schema({
   conservation_status: { type: String, required: true },
   original_location: { type: String, required: true },
   km_driven: { type: Number, required: true },
-  volunteer_notes: { type: String, required: false }
+  volunteer_notes: { type: String, required: false },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 });
 
 module.exports = mongoose.model('Critter', critterSchema, 'critters');
