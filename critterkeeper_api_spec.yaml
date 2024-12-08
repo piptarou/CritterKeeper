@@ -91,6 +91,60 @@ paths:
           description: 'OK'
         '500':
           description: 'Internal Server Error'
+  /login:
+    get:
+      summary: Get Login Page
+      operationId: getLoginPage
+      description: 'Display login page'
+      tags:
+        - 'User'
+      responses:
+        '200':
+          description: 'OK'
+    post:
+      summary: Login
+      operationId: login
+      description: 'Logs the user in'
+      tags:
+        - 'User'
+      responses:
+        '200':
+          description: 'OK'
+        '500':
+          description: 'An error occurred. Please try again.'
+  /logout:
+    get:
+      summary: Logout
+      operationId: logout
+      description: 'Logs the user out'
+      tags:
+        - 'User'
+      responses:
+        '200':
+          description: 'OK'
+        '500':
+          description: 'Error logging out'
+  /register:
+    get:
+      summary: Get Registration Page
+      operationId: getRegistrationPage
+      description: 'Display registreation page'
+      tags:
+        - 'User'
+      responses:
+        '200':
+          description: 'OK'
+    post:
+      summary: Create New User
+      operationId: createNewUser
+      description: 'Registers a new user'
+      tags:
+        - 'User'
+      responses:
+        '200':
+          description: 'OK'
+        '500':
+          description: 'An error occurred. Please try again.'
 servers:
   - url: http://localhost:3000
 components:

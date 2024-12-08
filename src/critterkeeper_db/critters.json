@@ -2,7 +2,9 @@
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3482"
   },
-  "rescue_date": "May 3, 2024",
+  "rescue_date": {
+    "$date": "2024-05-03T03:00:00.000Z"
+  },
   "case_number": "1",
   "critter_count": 3,
   "rescue_role": "Relay",
@@ -11,13 +13,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3483"
   },
-  "rescue_date": "May 10, 2024",
+  "rescue_date": {
+    "$date": "2024-05-10T03:00:00.000Z"
+  },
   "case_number": "2",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -26,13 +33,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3484"
   },
-  "rescue_date": "May 15, 2024",
+  "rescue_date": {
+    "$date": "2024-05-15T03:00:00.000Z"
+  },
   "case_number": "3",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -41,13 +53,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Barrington",
   "volunteer_notes": "",
-  "km_driven": 245
+  "km_driven": 245,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3485"
   },
-  "rescue_date": "May 24, 2024",
+  "rescue_date": {
+    "$date": "2024-05-24T03:00:00.000Z"
+  },
   "case_number": "4",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -56,13 +73,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Sable River",
   "volunteer_notes": "",
-  "km_driven": 145
+  "km_driven": 145,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3486"
   },
-  "rescue_date": "June 9, 2024",
+  "rescue_date": {
+    "$date": "2024-06-09T03:00:00.000Z"
+  },
   "case_number": "5",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -71,13 +93,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Bridgewater",
   "volunteer_notes": "",
-  "km_driven": 96
+  "km_driven": 96,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3487"
   },
-  "rescue_date": "June 10, 2024",
+  "rescue_date": {
+    "$date": "2024-06-10T03:00:00.000Z"
+  },
   "case_number": "6",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -86,13 +113,18 @@
   "conservation_status": "Special Concern",
   "original_location": "Keji",
   "volunteer_notes": "",
-  "km_driven": 139
+  "km_driven": 139,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3488"
   },
-  "rescue_date": "June 15, 2024",
+  "rescue_date": {
+    "$date": "2024-06-15T03:00:00.000Z"
+  },
   "case_number": "7",
   "critter_count": 1,
   "rescue_role": "Capture",
@@ -101,13 +133,18 @@
   "conservation_status": "Special Concern",
   "original_location": "Liverpool hwy",
   "volunteer_notes": "",
-  "km_driven": 72
+  "km_driven": 72,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3489"
   },
-  "rescue_date": "June 17, 2024",
+  "rescue_date": {
+    "$date": "2024-06-17T03:00:00.000Z"
+  },
   "case_number": "8",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -116,13 +153,18 @@
   "conservation_status": "Special Concern",
   "original_location": "Clark's Harbour",
   "volunteer_notes": "Also drove to get live trap for baby raccons that weren't captured until next day.",
-  "km_driven": 302
+  "km_driven": 302,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb348a"
   },
-  "rescue_date": "June 20, 2024",
+  "rescue_date": {
+    "$date": "2024-06-20T03:00:00.000Z"
+  },
   "case_number": "9",
   "critter_count": 3,
   "rescue_role": "Pickup",
@@ -131,13 +173,18 @@
   "conservation_status": "Special Concern",
   "original_location": "New Albany",
   "volunteer_notes": "",
-  "km_driven": 176
+  "km_driven": 176,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb348b"
   },
-  "rescue_date": "June 24, 2024",
+  "rescue_date": {
+    "$date": "2024-06-24T03:00:00.000Z"
+  },
   "case_number": "10",
   "critter_count": 3,
   "rescue_role": "Relay",
@@ -146,13 +193,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb348c"
   },
-  "rescue_date": "June 25, 2024",
+  "rescue_date": {
+    "$date": "2024-06-25T03:00:00.000Z"
+  },
   "case_number": "11",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -161,13 +213,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb348d"
   },
-  "rescue_date": "June 25, 2024",
+  "rescue_date": {
+    "$date": "2024-06-25T03:00:00.000Z"
+  },
   "case_number": "12",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -176,13 +233,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Liverpool",
   "volunteer_notes": "Drove from Middlewood",
-  "km_driven": 56
+  "km_driven": 56,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb348e"
   },
-  "rescue_date": "June 25, 2024",
+  "rescue_date": {
+    "$date": "2024-06-25T03:00:00.000Z"
+  },
   "case_number": "13",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -191,13 +253,18 @@
   "conservation_status": "Special Concern",
   "original_location": "Lockeport",
   "volunteer_notes": "Caller met me in Liverpool, Same trip as duck",
-  "km_driven": 1
+  "km_driven": 1,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb348f"
   },
-  "rescue_date": "June 26, 2024",
+  "rescue_date": {
+    "$date": "2024-06-26T03:00:00.000Z"
+  },
   "case_number": "14",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -206,13 +273,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Shelburne",
   "volunteer_notes": "",
-  "km_driven": 183
+  "km_driven": 183,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3490"
   },
-  "rescue_date": "June 27, 2024",
+  "rescue_date": {
+    "$date": "2024-06-27T03:00:00.000Z"
+  },
   "case_number": "15",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -221,13 +293,18 @@
   "conservation_status": "Invasive species",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3491"
   },
-  "rescue_date": "June 27, 2024",
+  "rescue_date": {
+    "$date": "2024-06-27T03:00:00.000Z"
+  },
   "case_number": "16",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -236,13 +313,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Shelburne",
   "volunteer_notes": "Same trip as starling",
-  "km_driven": 1
+  "km_driven": 1,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3492"
   },
-  "rescue_date": "June 29, 2024",
+  "rescue_date": {
+    "$date": "2024-06-29T03:00:00.000Z"
+  },
   "case_number": "17",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -251,13 +333,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3493"
   },
-  "rescue_date": "June 29, 2024",
+  "rescue_date": {
+    "$date": "2024-06-29T03:00:00.000Z"
+  },
   "case_number": "18",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -266,13 +353,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Barrington",
   "volunteer_notes": "Caller met me in Jordan Falls",
-  "km_driven": 166
+  "km_driven": 166,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3494"
   },
-  "rescue_date": "June 30, 2024",
+  "rescue_date": {
+    "$date": "2024-06-30T03:00:00.000Z"
+  },
   "case_number": "19",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -281,13 +373,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "Caller met me in Shelburne",
-  "km_driven": 133
+  "km_driven": 133,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3495"
   },
-  "rescue_date": "July 2, 2024",
+  "rescue_date": {
+    "$date": "2024-07-02T03:00:00.000Z"
+  },
   "case_number": "20",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -296,13 +393,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Nineveh",
   "volunteer_notes": "",
-  "km_driven": 146
+  "km_driven": 146,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3496"
   },
-  "rescue_date": "July 3, 2024",
+  "rescue_date": {
+    "$date": "2024-07-03T03:00:00.000Z"
+  },
   "case_number": "21",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -311,13 +413,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Port Maitland",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3497"
   },
-  "rescue_date": "July 4, 2024",
+  "rescue_date": {
+    "$date": "2024-07-04T03:00:00.000Z"
+  },
   "case_number": "22",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -326,13 +433,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 186
+  "km_driven": 186,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3498"
   },
-  "rescue_date": "July 5, 2024",
+  "rescue_date": {
+    "$date": "2024-07-05T03:00:00.000Z"
+  },
   "case_number": "23",
   "critter_count": 1,
   "rescue_role": "Capture",
@@ -341,13 +453,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Bridgewater",
   "volunteer_notes": "Side of rd next to dead sibling :(",
-  "km_driven": 98
+  "km_driven": 98,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb3499"
   },
-  "rescue_date": "July 7, 2024",
+  "rescue_date": {
+    "$date": "2024-07-07T03:00:00.000Z"
+  },
   "case_number": "24",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -356,13 +473,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Lockeport",
   "volunteer_notes": "",
-  "km_driven": 30
+  "km_driven": 30,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb349a"
   },
-  "rescue_date": "July 8, 2024",
+  "rescue_date": {
+    "$date": "2024-07-08T03:00:00.000Z"
+  },
   "case_number": "25",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -371,13 +493,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Barrington",
   "volunteer_notes": "Caller met me in Shelburne",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb349b"
   },
-  "rescue_date": "July 12, 2024",
+  "rescue_date": {
+    "$date": "2024-07-12T03:00:00.000Z"
+  },
   "case_number": "26",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -386,13 +513,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 251
+  "km_driven": 251,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb349c"
   },
-  "rescue_date": "July 14, 2024",
+  "rescue_date": {
+    "$date": "2024-07-14T03:00:00.000Z"
+  },
   "case_number": "27",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -401,13 +533,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Port La Tour",
   "volunteer_notes": "Caller met me in Shelburne",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb349d"
   },
-  "rescue_date": "July 15, 2024",
+  "rescue_date": {
+    "$date": "2024-07-15T03:00:00.000Z"
+  },
   "case_number": "28",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -416,13 +553,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Tusket",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb349e"
   },
-  "rescue_date": "July 15, 2024",
+  "rescue_date": {
+    "$date": "2024-07-15T03:00:00.000Z"
+  },
   "case_number": "29",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -431,13 +573,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Caledonia",
   "volunteer_notes": "Caller met me in Liverpool, Same trip as raccoon",
-  "km_driven": 1
+  "km_driven": 1,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb349f"
   },
-  "rescue_date": "July 23, 2024",
+  "rescue_date": {
+    "$date": "2024-07-23T03:00:00.000Z"
+  },
   "case_number": "30",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -446,13 +593,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Tusket",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a0"
   },
-  "rescue_date": "July 24, 2024",
+  "rescue_date": {
+    "$date": "2024-07-24T03:00:00.000Z"
+  },
   "case_number": "31",
   "critter_count": 3,
   "rescue_role": "Relay",
@@ -461,13 +613,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "Volunteered at drop-off and drove from there for relay, also dropped off letters",
-  "km_driven": 239
+  "km_driven": 239,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a1"
   },
-  "rescue_date": "July 25, 2024",
+  "rescue_date": {
+    "$date": "2024-07-25T03:00:00.000Z"
+  },
   "case_number": "32",
   "critter_count": 1,
   "rescue_role": "Capture",
@@ -476,13 +633,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Shelburne",
   "volunteer_notes": "So cute! First porcupine rescue ever",
-  "km_driven": 185
+  "km_driven": 185,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a2"
   },
-  "rescue_date": "July 28, 2024",
+  "rescue_date": {
+    "$date": "2024-07-28T03:00:00.000Z"
+  },
   "case_number": "33",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -491,13 +653,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a3"
   },
-  "rescue_date": "July 28, 2024",
+  "rescue_date": {
+    "$date": "2024-07-28T03:00:00.000Z"
+  },
   "case_number": "34",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -506,13 +673,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "Eye infection, Same trip as gull",
-  "km_driven": 0
+  "km_driven": 0,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a4"
   },
-  "rescue_date": "July 29, 2024",
+  "rescue_date": {
+    "$date": "2024-07-29T03:00:00.000Z"
+  },
   "case_number": "35",
   "critter_count": 4,
   "rescue_role": "Relay",
@@ -521,13 +693,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "Eyes not open, smidge of fur",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a5"
   },
-  "rescue_date": "July 30, 2024",
+  "rescue_date": {
+    "$date": "2024-07-30T03:00:00.000Z"
+  },
   "case_number": "36",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -536,13 +713,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a6"
   },
-  "rescue_date": "August 1, 2024",
+  "rescue_date": {
+    "$date": "2024-08-01T03:00:00.000Z"
+  },
   "case_number": "37",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -551,13 +733,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a7"
   },
-  "rescue_date": "August 4, 2024",
+  "rescue_date": {
+    "$date": "2024-08-04T03:00:00.000Z"
+  },
   "case_number": "38",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -566,13 +753,18 @@
   "conservation_status": "Vulnerable",
   "original_location": "Barrington",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a8"
   },
-  "rescue_date": "August 4, 2024",
+  "rescue_date": {
+    "$date": "2024-08-04T03:00:00.000Z"
+  },
   "case_number": "39",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -581,13 +773,18 @@
   "conservation_status": "Vulnerable",
   "original_location": "Barrington",
   "volunteer_notes": "Very old; porcupine quills in feet. Same trip as other gull",
-  "km_driven": 0
+  "km_driven": 0,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34a9"
   },
-  "rescue_date": "August 4, 2024",
+  "rescue_date": {
+    "$date": "2024-08-04T03:00:00.000Z"
+  },
   "case_number": "40",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -596,13 +793,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "Same trip as other gulls",
-  "km_driven": 0
+  "km_driven": 0,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34aa"
   },
-  "rescue_date": "August 13, 2024",
+  "rescue_date": {
+    "$date": "2024-08-13T03:00:00.000Z"
+  },
   "case_number": "41",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -611,13 +813,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Shelburne",
   "volunteer_notes": "Caller met me at gas station",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34ab"
   },
-  "rescue_date": "August 13, 2024",
+  "rescue_date": {
+    "$date": "2024-08-13T03:00:00.000Z"
+  },
   "case_number": "42",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -626,13 +833,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "Same trip as grackle",
-  "km_driven": 0
+  "km_driven": 0,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34ac"
   },
-  "rescue_date": "August 13, 2024",
+  "rescue_date": {
+    "$date": "2024-08-13T03:00:00.000Z"
+  },
   "case_number": "43",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -641,13 +853,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "Same trip as grackle",
-  "km_driven": 0
+  "km_driven": 0,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34ad"
   },
-  "rescue_date": "August 16, 2024",
+  "rescue_date": {
+    "$date": "2024-08-16T03:00:00.000Z"
+  },
   "case_number": "44",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -656,13 +873,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Shelburne",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34ae"
   },
-  "rescue_date": "August 19, 2024",
+  "rescue_date": {
+    "$date": "2024-08-19T03:00:00.000Z"
+  },
   "case_number": "45",
   "critter_count": 1,
   "rescue_role": "Relay",
@@ -671,13 +893,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Barrington",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34af"
   },
-  "rescue_date": "August 21, 2024",
+  "rescue_date": {
+    "$date": "2024-08-21T03:00:00.000Z"
+  },
   "case_number": "46",
   "critter_count": 2,
   "rescue_role": "Relay",
@@ -686,13 +913,18 @@
   "conservation_status": "Least Concern",
   "original_location": "Yarmouth",
   "volunteer_notes": "",
-  "km_driven": 182
+  "km_driven": 182,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
     "$oid": "67523ea76f73c43ba4eb34b0"
   },
-  "rescue_date": "August 23, 2024",
+  "rescue_date": {
+    "$date": "2024-08-23T03:00:00.000Z"
+  },
   "case_number": "47",
   "critter_count": 1,
   "rescue_role": "Pickup",
@@ -701,7 +933,10 @@
   "conservation_status": "Least Concern",
   "original_location": "Port Mouton",
   "volunteer_notes": "",
-  "km_driven": 106
+  "km_driven": 106,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 },
 {
   "_id": {
@@ -719,5 +954,8 @@
   "original_location": "Bridgewater",
   "km_driven": 123,
   "volunteer_notes": "",
-  "__v": 0
+  "__v": 0,
+  "user": {
+    "$oid": "6755ed21907200876877bf8a"
+  }
 }]

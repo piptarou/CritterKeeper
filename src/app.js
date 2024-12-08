@@ -57,7 +57,7 @@ app.get('/', async (req, res) => {
 
     const sort = req.query.sort || 'desc';
     const sortOrder = sort === 'asc' ? 1 : -1;
-    const critters = await Critter.find().sort({ rescue_date: sortOrder });
+    const critters = await Critter.find({ user: req.session.user.id }).sort({ rescue_date: sortOrder });
 
     res.render('index', { critters, sort, user: req.session.user });
   } catch (err) {
@@ -132,7 +132,10 @@ app.get('/new_critter', (req, res) => {
 
 // add new critter
 app.post('/new_critter', async (req, res) => {
+
+  const currentUser = req.session.user;
   const newCritter = new Critter({
+
     rescue_date: req.body.rescue_date,
     case_number: req.body.case_number,
     rescue_role: req.body.rescue_role,
@@ -143,6 +146,8 @@ app.post('/new_critter', async (req, res) => {
     original_location: req.body.original_location,
     km_driven: req.body.km_driven,
     volunteer_notes: req.body.volunteer_notes,
+    user: currentUser.id,
+
   });
   try {
     await newCritter.save();
