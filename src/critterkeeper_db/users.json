@@ -1,17 +1,9 @@
-[
-    {
-        "username": "miranda",
-        "password": "",
-        "email": "miranda@fakemail.com"
-    },
-    {
-        "username": "jamie",
-        "password": "",
-        "email": "jamie@fakemail.com"
-    },
-    {
-        "username": "danial",
-        "password": "",
-        "email": "danial@fakemail.com"
-    }
-]
+[{
+  "_id": {
+    "$oid": "6755ff7d1082199f453d69f2"
+  },
+  "username": "miranda",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$9uipDImLLAG6LgBQVbq0SQ$YlOzyZNCmWLuidE9HEdYNBQni7K50gbNYhborwMlwdI",
+  "email": "miranda@fakemail.com",
+  "__v": 0
+}]
