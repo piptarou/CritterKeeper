@@ -4,20 +4,21 @@ const uri = 'mongodb://mongo:27017/critterkeeper';
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const argon2 = require('argon2');
-
-const app = express();
-const port = 3000;
 const path = require('path');
 
 const Critter = require('./models/Critter');
 const User = require('./models/User');
+const startup = require('./scripts/startup');
+
+const app = express();
+const port = 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static('./src/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
-  secret: 'your-secret-key',
+  secret: 'dev-secret-key',
   resave: false,
   saveUninitialized: true,
 }));
@@ -26,27 +27,9 @@ mongoose
   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
-
-    // create test user
-    (async () => {
-      try {
-        const hashedPassword = await argon2.hash('testpassword123');
-        const testUser = new User({ username: 'testuser', password: hashedPassword });
-
-        const existingUser = await User.findOne({ username: 'testuser' });
-        if (!existingUser) {
-          await testUser.save();
-          console.log('Test user created with hashed password!');
-        } else {
-          console.log('Test user already exists.');
-        }
-      } catch (err) {
-        console.error('Error creating test user:', err);
-      }
-    })();
+    startup();
   })
   .catch((err) => console.error('Error connecting to the database:', err));
-
 
 // index of critters
 app.get('/', async (req, res) => {
@@ -134,8 +117,8 @@ app.get('/new_critter', (req, res) => {
 app.post('/new_critter', async (req, res) => {
 
   const currentUser = req.session.user;
-  const newCritter = new Critter({
-
+  const newCritter = new Critter(
+    {
     rescue_date: req.body.rescue_date,
     case_number: req.body.case_number,
     rescue_role: req.body.rescue_role,
@@ -147,8 +130,8 @@ app.post('/new_critter', async (req, res) => {
     km_driven: req.body.km_driven,
     volunteer_notes: req.body.volunteer_notes,
     user: currentUser.id,
-
-  });
+    }
+  );
   try {
     await newCritter.save();
     res.redirect('/');

@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="login-container">
-        <form class="login-form" action="/login" method="POST">
-            <h1>Login</h1>
-            <% if (error) { %>
-                <p>
-                    <%= error %>
-                </p>
-                <% } %>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-                    <button type="submit">Login</button>
-                    <a class="register-link" href="/register">Don't have an account? Register here.</a>
-        </form>
+      <form class="login-form" action="/login" method="POST">
+        <h1>Login</h1>
+        <% if (error) { %>
+        <p><%= error %></p>
+        <% } %>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Login</button>
+        <a class="register-link" href="/register"
+          >Don't have an account? Register here.</a
+        >
+      </form>
     </div>
-</body>
+  </body>
 </html>
