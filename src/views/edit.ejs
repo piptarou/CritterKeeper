@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Critter</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Critter</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <div class="container mt-5">
-        <h1>Edit Critter</h1>
-        <form action="/update/<%= critter.case_number %>" method="POST" class="mt-3">
-            <div class="form-row">
-                <div class="form-group col-md-3">
-                    <label for="rescue_date">Rescue Date</label>
-                    <input type="date" class="form-control" name="rescue_date" value="<%= critter.rescue_date.toISOString().substring(0, 10) %>" required>
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="case_number">Case Number</label>
-                    <input type="text" class="form-control" name="case_number" value="<%= critter.case_number %>" readonly required>
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="rescue_role">Rescue Role</label>
-                    <select class="form-control" name="rescue_role" required>
-                        <option value="Pick up" <%= critter.rescue_role === 'Pick up' ? 'selected' : '' %>>Pick up</option>
-                        <option value="Relay" <%= critter.rescue_role === 'Relay' ? 'selected' : '' %>>Relay</option>
-                        <option value="Capture" <%= critter.rescue_role === 'Capture' ? 'selected' : '' %>>Capture</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-3">
-                    <label for="critter_count">Critter Count</label>
-                    <input type="number" class="form-control" name="critter_count" value="<%= critter.critter_count %>" required>
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="animal_type">Animal Type</label>
-                    <input type="text" class="form-control" name="animal_type" value="<%= critter.animal_type %>" required>
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="animal_age">Animal Age</label>
-                    <select class="form-control" name="animal_age" required>
-                        <option value="Baby" <%= critter.animal_age === 'Baby' ? 'selected' : '' %>>Baby</option>
-                        <option value="Juvenile" <%= critter.animal_age === 'Juvenile' ? 'selected' : '' %>>Juvenile</option>
-                        <option value="Adult" <%= critter.animal_age === 'Adult' ? 'selected' : '' %>>Adult</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-3">
-                    <label for="conservation_status">Conservation Status</label>
-                    <select class="form-control" name="conservation_status" required>
-                        <option value="Least Concern" <%= critter.conservation_status === 'Least Concern' ? 'selected' : '' %>>Least Concern</option>
-                        <option value="Special Concern" <%= critter.conservation_status === 'Special Concern' ? 'selected' : '' %>>Special Concern</option>
-                        <option value="Vulnerable" <%= critter.conservation_status === 'Vulnerable' ? 'selected' : '' %>>Vulnerable</option>
-                        <option value="Endangered" <%= critter.conservation_status === 'Endangered' ? 'selected' : '' %>>Endangered</option>
-                        <option value="Critically Endangered" <%= critter.conservation_status === 'Critically Endangered' ? 'selected' : '' %>>Critically Endangered</option>
-                        <option value="Unknown" <%= critter.conservation_status === 'Unknown' ? 'selected' : '' %>>Unknown</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="original_location">Original Location</label>
-                    <input type="text" class="form-control" name="original_location" value="<%= critter.original_location %>" required>
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="km_driven">KM Driven</label>
-                    <input type="text" class="form-control" name="km_driven" value="<%= critter.km_driven %>" required pattern="^[0-9]+$" title="Please enter only numbers">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="volunteer_notes">Volunteer Notes</label>
-                    <textarea class="form-control" name="volunteer_notes" style="resize: both;" rows="4"><%= critter.volunteer_notes %></textarea>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Update Critter</button>
-        </form>
-    </div>
+  <div class="container mt-5">
+    <h1>Edit Critter</h1>
+    <form action="/update/<%= critter.case_number %>" method="POST" class="mt-3">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="rescue_date">Rescue Date</label>
+          <input type="date" class="form-control" name="rescue_date"
+            value="<%= critter.rescue_date.toISOString().substring(0, 10) %>" required>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="case_number">Case Number</label>
+          <input type="text" class="form-control" name="case_number" value="<%= critter.case_number %>" readonly
+            required>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="rescue_role">Rescue Role</label>
+          <select class="form-control" name="rescue_role" required>
+            <option value="Pick up" <%=critter.rescue_role==='Pick up' ? 'selected' : '' %>>Pick up</option>
+            <option value="Relay" <%=critter.rescue_role==='Relay' ? 'selected' : '' %>>Relay</option>
+            <option value="Capture" <%=critter.rescue_role==='Capture' ? 'selected' : '' %>>Capture</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="critter_count">Critter Count</label>
+          <input type="number" class="form-control" name="critter_count" value="<%= critter.critter_count %>" required>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="animal_type">Animal Type</label>
+          <input type="text" class="form-control" name="animal_type" value="<%= critter.animal_type %>" required>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="animal_age">Animal Age</label>
+          <select class="form-control" name="animal_age" required>
+            <option value="Baby" <%=critter.animal_age==='Baby' ? 'selected' : '' %>>Baby</option>
+            <option value="Juvenile" <%=critter.animal_age==='Juvenile' ? 'selected' : '' %>>Juvenile
+            </option>
+            <option value="Adult" <%=critter.animal_age==='Adult' ? 'selected' : '' %>>Adult</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="conservation_status">Conservation Status</label>
+          <select class="form-control" name="conservation_status" required>
+            <option value="Least Concern" <%=critter.conservation_status==='Least Concern' ? 'selected' : '' %>>Least
+              Concern</option>
+            <option value="Special Concern" <%=critter.conservation_status==='Special Concern' ? 'selected' : '' %>
+              >Special Concern</option>
+            <option value="Vulnerable" <%=critter.conservation_status==='Vulnerable' ? 'selected' : '' %>
+              >Vulnerable</option>
+            <option value="Endangered" <%=critter.conservation_status==='Endangered' ? 'selected' : '' %>
+              >Endangered</option>
+            <option value="Critically Endangered" <%=critter.conservation_status==='Critically Endangered' ? 'selected'
+              : '' %>>Critically Endangered</option>
+            <option value="Unknown" <%=critter.conservation_status==='Unknown' ? 'selected' : '' %>>Unknown
+            </option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="original_location">Original Location</label>
+          <input type="text" class="form-control" name="original_location" value="<%= critter.original_location %>"
+            required>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="km_driven">KM Driven</label>
+          <input type="text" class="form-control" name="km_driven" value="<%= critter.km_driven %>" required
+            pattern="^[0-9]+$" title="Please enter only numbers">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="volunteer_notes">Volunteer Notes</label>
+          <textarea class="form-control" name="volunteer_notes" style="resize: both;"
+            rows="4"><%= critter.volunteer_notes %></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Update Critter</button>
+    </form>
+  </div>
 </body>
 </html>

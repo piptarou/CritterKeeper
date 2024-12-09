@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const critterSchema = new mongoose.Schema({
   case_number: { type: String, required: true, unique: true },
@@ -11,7 +11,7 @@ const critterSchema = new mongoose.Schema({
   original_location: { type: String, required: true },
   km_driven: { type: Number, required: true },
   volunteer_notes: { type: String, required: false },
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 });
 
-module.exports = mongoose.model('Critter', critterSchema, 'critters');
+module.exports = mongoose.model("Critter", critterSchema, "critters");
