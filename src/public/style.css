@@ -52,14 +52,17 @@ nav a:hover {
 }
 
 .table-container {
-  max-height: 400px;
-  overflow-y: auto;
+  display: block;
+  max-height: 500px;
   margin-top: 20px;
-  width: 100%;
+  overflow-x: hidden;
+  width: 1200px;
 }
 
 .table {
-  width: 100%;
+  display: block;
+  max-height: 500px;
+  overflow-y: visible;
   table-layout: auto;
   border-collapse: separate;
   border-spacing: 0;
