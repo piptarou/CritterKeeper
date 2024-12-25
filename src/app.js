@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const uri = 'mongodb+srv://miranda:cookies@cluster0.p71c3.mongodb.net/';
+const uri = 'mongodb://mongo:27017/critterkeeper';
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const argon2 = require('argon2');
